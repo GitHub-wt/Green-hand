@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>智能社--http://www.zhinengshe.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            overflow: hidden;
+        }
+        #box ul{
+            width: 300px;
+            border: 3px solid #000;
+            float: left;
+            margin: 10px;
+        }
+        #box ul li{
+            width: 296px;
+            background: #eee;
+            margin: 2px;
+        }
+    </style>
+    <script>
+        function rnd(n,m){
+            return parseInt(Math.random()*(m-n)+n);
+        }
+        function createLi(){
+            var oLi=document.createElement('li');
+            oLi.style.height=rnd(200,400)+'px';
+            oLi.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+            return oLi;
+        }
+        window.onload=function(){
+            var aUl=document.getElementsByTagName('ul');
+            var oBox=document.getElementById('box');
+
+            function create60Li(){
+                for(var i=0;i<60;i++){
+                    var oLi=createLi();
+                    var h1=aUl[0].offsetHeight;
+                    var h2=aUl[1].offsetHeight;
+                    var h3=aUl[2].offsetHeight;
+                    //  1 5 8
+                    var minH=null;
+                    if(h1<h2){
+                        if(h1<h3){
+                            minH=aUl[0];
+                        }else{
+                            minH=aUl[2];
+                        }
+                    }else{
+                        if(h2<h3){
+                            minH=aUl[1];
+                        }else{
+                            minH=aUl[2];
+                        }
+                    }
+                    minH.appendChild(oLi);
+                }
+            }
+            create60Li();
+
+            window.onscroll=function(){
+                var sH=document.documentElement.scrollTop || document.body.scrollTop;
+                var cH=document.documentElement.clientHeight;
+                var boxH=oBox.offsetHeight;
+                if(sH+cH>=boxH-300){
+                    create60Li();
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <ul>
+        </ul>
+        <ul></ul>
+        <ul></ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
