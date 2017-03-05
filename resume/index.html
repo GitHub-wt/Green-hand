@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>王涛的简历</title>
+
+	<link rel="stylesheet" href="./css/bootstrap.css" />
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/index.jq.js"></script>
+	<style type="text/css" media="screen">
+		body{padding-top:70px;}
+	</style>
+	<script>
+		$(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+	
+
+</head>
+<body class="container">
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<div class="navbar-brand">个人简历</div>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#downNav">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="downNav" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<button type="button" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#show" title="print">打印</button>
+							<button class="btn btn-info navbar-btn" data-toggle="tooltip" data-placement="bottom" title="DownLoad">DownLoad</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="modal fade" id="show">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+					<h4 class="modal-title">打印简历</h4>
+				</div>
+				<div class="modal-body">
+					打印配置
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Print</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="panel panel-default">
+			<div class="panel-heading">个人信息</div>
+			<div class="panel-body">
+				<img src="./images/a.jpg" alt="me" class="img-responsive img-rounded img-thumbnail"/>
+				<p class="text-center text-primary">wangtao</p>
+				<address>
+					<strong>个人信息</strong>
+					<br/>
+					<span class="glyphicon glyphicon-home" title="Address"> 北京市通州区</span><br/>
+					<span class="glyphicon glyphicon-file" title="PostalCode"> 邮编</span><br/>
+					<span class="glyphicon glyphicon-phone" title="Mobile"> 电话</span><br/>
+					<span class="glyphicon glyphicon-envelope" title="Email"> <code>邮箱</code></span><br/>
+				</address>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">掌握技能</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-4">
+						<span class="text-muted">HTML/CSS</span>
+					</div>
+					<div class="col-sm-8">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" style="width:90%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<span class="text-warning">HTML5/CSS3</span>
+					</div>
+					<div class="col-sm-8">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped progress-bar-warning active" style="width:70%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<span class="text-info">javascript</span>
+					</div>
+					<div class="col-sm-8">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped progress-bar-info active" style="width:80%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<span class="text-success">jQuery</span>
+					</div>
+					<div class="col-sm-8">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped progress-bar-success active" style="width:80%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<span class="text-muted">angular</span>
+					</div>
+					<div class="col-sm-8">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped progress-bar-danger active" style="width:70%"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-primary">
+			<div class="panel-heading">联系我</div>
+			<div class="panel-body">
+				<form action="" class="form-horizontal">
+					<div class="form-group">
+						<labie for="inputEmail"class="col-sm-2 control-label">Email</labie>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="inputEmail" placeholder="Email"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="userName"class="col-sm-2 control-label">Name</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="userName" placeholder="Name"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="button" class="btn btn-primary pull-right">发送</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<div class="jumbotron">
+			<p class="text-right small">
+				<span>参加工作多久，做过几个项目。项目详见 <a href="#">链接地址</a></span><br />
+				<span>参加工作多久，做过几个项目。项目详见 <a href="#">链接地址</a></span><br />
+				<span>参加工作多久，做过几个项目。项目详见 <a href="#">链接地址</a></span><br />
+				<span>参加工作多久，做过几个项目。项目详见 <a href="#">链接地址</a></span><br />
+			</p>
+		</div>
+		<div class="panel-group" id="box">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<a href="#list1" data-toggle="collapse" data-parent="#box">工作经验</a>
+					</div>
+				</div>
+				<div id="list1" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ul class="panel-group">
+							<li class="list-group-item list-group-item-success">
+								<div class="row">
+									<div class="col-sm-4">2016/06-2017/01</div>
+									<div class="col-sm-4">xxxxx公司</div>
+									<div class="col-sm-4">前端开发</div>
+								</div>
+							</li>
+							<li class="list-group-item list-group-item-success">
+								<div class="row">
+									<div class="col-sm-4">2015/06-2016/01</div>
+									<div class="col-sm-4">xxxxx公司</div>
+									<div class="col-sm-4">前端开发</div>
+								</div>
+							</li>
+							<li class="list-group-item list-group-item-success">
+								<div class="row">
+									<div class="col-sm-4">2014/06-2015/01</div>
+									<div class="col-sm-4">xxxxx公司</div>
+									<div class="col-sm-4">前端开发</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<a href="#list2" data-toggle="collapse" data-parent="#box">教育经历</a>
+					</div>
+				</div>
+				<div id="list2" class="panel-collapse collapse">
+					<div class="panel-body">
+						<ul class="panel-group">
+							<li class="list-group-item list-group-item-success">
+								<div class="row">
+									<div class="col-sm-4">2000/07-2004/09</div>
+									<div class="col-sm-4">xxxxx学校</div>
+									<div class="col-sm-4">所在专业</div>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="panel-title">
+						<a href="#list3" data-toggle="collapse" data-parent="#box">项目展示</a>
+					</div>
+				</div>
+				<div id="list3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div id="bannerName" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#bannerName" data-slide-to="0" class="active"></li>
+								<li data-target="#bannerName" data-slide-to="1"></li>
+								<li data-target="#bannerName" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="./images/0.jpg" alt="加载失败" class="img-rounded img-responsive"/>
+									<div class="carousel-caption">具体的描述内容</div>
+								</div>
+								<div class="item">
+									<img src="./images/1.jpg" alt="加载失败" class="img-rounded img-responsive"/>
+									<div class="carousel-caption">具体的描述内容</div>
+								</div>
+								<div class="item">
+									<img src="./images/2.jpg" alt="加载失败" class="img-rounded img-responsive"/>
+									<div class="carousel-caption">具体的描述内容</div>
+								</div>
+							</div>
+							<a class="left carousel-control" href="#bannerName" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							</a>
+							<a href="#bannerName" class="right carousel-control" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="navbar-default navbar-fixed-bottom text-center">
+		All images and contents &copy; tarena
+	</footer>
+</body>
+</html>
